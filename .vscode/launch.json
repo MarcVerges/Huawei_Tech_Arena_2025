@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "name": "Run Python module (src layout)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "src.${input:moduleName}",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "justMyCode": true,
+      "console": "integratedTerminal"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "moduleName",
+      "type": "promptString",
+      "description": "Module to run (e.g. main)"
+    }
+  ]
+}
